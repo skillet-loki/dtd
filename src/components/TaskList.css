@@ -1,0 +1,79 @@
+/* ── Task List ───────────────────────────────────── */
+.task-list {}
+
+.task-list__stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: var(--color-success);
+  border-radius: 999px;
+  transition: width .3s ease;
+}
+
+.task-list__form-wrapper {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow);
+}
+
+.task-list__filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.filter-search {
+  flex: 1 1 180px;
+  padding: 7px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color .15s;
+}
+.filter-search:focus { border-color: var(--color-primary); }
+
+.task-list__filters select {
+  padding: 7px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+  outline: none;
+  cursor: pointer;
+  transition: border-color .15s;
+}
+.task-list__filters select:focus { border-color: var(--color-primary); }
+
+.task-list__empty {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: 48px 0;
+  font-size: 0.95rem;
+}
+
+.task-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
